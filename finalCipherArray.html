@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeasarCipherArraySolution</title>
+    <link rel="stylesheet" href="cipherStyle.css">
+    <script src="finalCipher.js"></script>
+</head>
+<body>
+    <div id="container">
+        <label for="encodeText">Klartext</label>
+        <input type="text" id="encodeText"/>
+        <label for="Key">Cäsar Schlüssel</label>
+        <input type="number" id="Key" oninput="if(this.value <0){this.value = this.value * -1}"
+        onkeyup="if(this.value >25){this.value = 0 }"/>
+        <label for="decodeText">Verschlüsselter Text</label>
+        <input type="text" id="decodeText"/>
+        <div id="buttons">
+            <button type="submit" id="encCipher" onclick=encodeCipher()><img src="./lock-fill.svg"/></button>
+            <button type="submit" id="decCipher" onclick=decodeCipher()><img src="./unlock-fill.svg"/></button>
+        </div><br>
+        <div id="output-log">
+            <output name="ciphedResult" for="cipherText" for="cKey" id="output1">Der verschlüsselte Text ist: </output><br>
+            <output name="reverseCiphedResult" for="reverseCipherText" for="cKey" id="reverseOutput">Der entschlüsselte Text ist: </output>
+        </div>
+    </div>
+</body>
+</html>
+</html>
