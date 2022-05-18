@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CipherArraysV1</title>
+    <link rel="stylesheet" href="cipherStyle.css">
+    <script src="ArrayCipherV1.js"></script>
+</head>
+<body>
+    <input type="text" id="text">Klartext</input><br>
+    <input type="text" id="reverseText">Verschlüsselter Text</input><br>
+    <input type="number" id="cKey" oninput="if(this.value <0){this.value = this.value * -1}"
+    onkeyup="if(this.value >26){this.value = 0 }">Insert Key</input><br>
+    <button type="submit" id="cipher" onclick="caeserCipher()">verschlüsseln</button>
+    <button type="submit" id="cipher" onclick="reverseCipher()">entschlüsseln</button>
+    <output name="ciphedResult" for="cipherText" for="cKey" id="output1">Verschlüsselter Text ist ==></output><br>
+    <output name="reverseCiphedResult" for="reverseCipherText" for="cKey" id="reverseOutput">Entschlüsselter Textist ==></output><br>    
+</body>
+</html>
